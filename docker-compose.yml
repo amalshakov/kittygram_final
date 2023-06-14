@@ -15,7 +15,7 @@ services:
     build: ./backend/
     env_file: .env
     volumes:
-      - static:/static
+      - static:/backend_static
       - media:/media
     depends_on:
       - db
@@ -29,5 +29,5 @@ services:
     ports:
       - 9000:80
     volumes:
-      - static:/static/
-      - media:/media/
+      - static:/static
+      - media:/media

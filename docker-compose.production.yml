@@ -18,13 +18,11 @@ services:
       - static_volume:/static
   frontend:
     image: amalshakov/kittygram_frontend
-    env_file: .env
     command: cp -r /app/build/. /static/
     volumes:
       - static_volume:/static
   gateway:
     image: amalshakov/kittygram_gateway
-    env_file: .env
     volumes:
       - static_volume:/static/
     ports:

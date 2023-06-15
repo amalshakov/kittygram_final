@@ -16,9 +16,7 @@ services:
     env_file: .env
     volumes:
       - static:/backend_static
-      - media:/media
-    depends_on:
-      - db
+      - media:/app/media
   frontend:
     build: ./frontend/
     command: cp -r /app/build/. /static/
@@ -30,4 +28,4 @@ services:
       - 9000:80
     volumes:
       - static:/static
-      - media:/media
+      - media:/app/media

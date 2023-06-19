@@ -4,7 +4,6 @@ volumes:
   pg_data:
   static:
   media:
-  ./config/nginx/conf.d:
 
 services:
   db:
@@ -24,10 +23,9 @@ services:
     volumes:
       - static:/static
   gateway:
-    image: nginx:1.22.1
+    build: ./nginx/
     ports:
       - 9000:80
     volumes:
       - static:/static
       - media:/app/media
-      - ./config/nginx/conf.d:/etc/nginx/conf.d

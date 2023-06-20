@@ -24,7 +24,7 @@ sudo apt install curl
 ```
 curl -fSL https://get.docker.com -o get-docker.sh
 ```
-4. Запустите сохранённый скрипт с правами суперпользователя:
+4. Запустите сохраненный скрипт с правами суперпользователя:
 ```
 sudo sh ./get-docker.sh
 ```

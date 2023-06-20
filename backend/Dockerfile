@@ -6,6 +6,7 @@ COPY requirements.txt ./
 
 RUN pip install -r requirements.txt --no-cache-dir
 
+RUN mkdir backend_static
 RUN mkdir backend_static/static
 
 COPY . .

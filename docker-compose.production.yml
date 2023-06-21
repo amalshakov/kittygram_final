@@ -15,7 +15,7 @@ services:
     image: amalshakov/kittygram_backend
     env_file: .env
     volumes:
-      - static:/app/backend_static/static
+      - static:/backend_static
       - media:/app/media
   frontend:
     image: amalshakov/kittygram_frontend
